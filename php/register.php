@@ -16,10 +16,6 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password
 	$email = $_POST['email'];	
     $password = $_POST['password'];
 
-    // Hash the password for security
-    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Insert user into database
     $sql = "INSERT INTO login (username,email, password) VALUES ('$username','$email', '$password')";
     if ($conn->query($sql) === TRUE) {
         echo "Registration successful!";
