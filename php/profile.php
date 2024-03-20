@@ -1,12 +1,9 @@
 
 <?php
 require 'vendor/autoload.php'; 
-
-
 $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
 $database_name = $mongoClient->selectDatabase('registration');
 $collection_name = $database_name->selectCollection('profiledetails');
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
